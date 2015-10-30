@@ -1,0 +1,19 @@
+*** ./smali/com/android/server/LocationManagerService$Receiver.smali	2015-10-30 16:59:28.359289178 +0100
+--- /home/slimshadys/miui-v7/w7/temp/new_smali/services.jar.out/./smali/com/android/server/LocationManagerService$Receiver.smali	2015-10-30 16:54:51.855289962 +0100
+***************
+*** 13,19 ****
+  .end annotation
+  
+  .annotation system Ldalvik/annotation/InnerClass;
+!     accessFlags = 0x12
+      name = "Receiver"
+  .end annotation
+  
+--- 13,19 ----
+  .end annotation
+  
+  .annotation system Ldalvik/annotation/InnerClass;
+!     accessFlags = 0x10
+      name = "Receiver"
+  .end annotation
+  

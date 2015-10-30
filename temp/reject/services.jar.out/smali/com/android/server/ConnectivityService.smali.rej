@@ -1,0 +1,19 @@
+*** ConnectivityService.smali	2015-10-30 16:59:22.519289195 +0100
+--- ConnectivityService.smali	2015-10-30 16:54:46.935289976 +0100
+***************
+*** 732,737 ****
+      .end local v17    # "id":Ljava/lang/String;
+      .end local v26    # "name":Ljava/lang/String;
+      :cond_1
+      invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+  
+      move-result-object v2
+--- 732,739 ----
+      .end local v17    # "id":Ljava/lang/String;
+      .end local v26    # "name":Ljava/lang/String;
+      :cond_1
++     invoke-static/range {p1 .. p1}, Landroid/provider/MiuiSettings$System;->setNetHostName(Landroid/content/Context;)V
++ 
+      invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+  
+      move-result-object v2
