@@ -1,0 +1,19 @@
+*** BackupManagerService$PerformFullBackupTask.smali	2015-10-30 16:59:00.995289256 +0100
+--- BackupManagerService$PerformFullBackupTask.smali	2015-10-30 16:54:27.803290030 +0100
+***************
+*** 1728,1734 ****
+  
+      and-int v23, v23, v24
+  
+!     if-eqz v23, :cond_3
+  
+      move-object/from16 v0, v21
+  
+--- 1730,1736 ----
+  
+      and-int v23, v23, v24
+  
+!     #if-eqz v23, :cond_3
+  
+      move-object/from16 v0, v21
+  

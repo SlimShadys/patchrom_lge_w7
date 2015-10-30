@@ -1,0 +1,15 @@
+*** ./smali/android/app/DialogFragment.smali	2015-10-30 17:02:28.819288666 +0100
+--- /home/slimshadys/miui-v7/w7/temp/new_smali/framework.jar.out/./smali/android/app/DialogFragment.smali	2015-10-30 16:58:00.723289427 +0100
+***************
+*** 421,426 ****
+--- 421,430 ----
+      return-void
+  
+      :cond_1
++     iget-object v2, p0, Landroid/app/DialogFragment;->mDialog:Landroid/app/Dialog;
++ 
++     if-eqz v2, :cond_0
++ 
+      invoke-virtual {p0}, Landroid/app/DialogFragment;->getView()Landroid/view/View;
+  
+      move-result-object v1

@@ -1,0 +1,20 @@
+*** ./smali/android/database/AbstractCursor.smali	2015-10-30 17:02:10.575288718 +0100
+--- /home/slimshadys/miui-v7/w7/temp/new_smali/framework.jar.out/./smali/android/database/AbstractCursor.smali	2015-10-30 16:57:40.191289485 +0100
+***************
+*** 825,830 ****
+--- 825,839 ----
+      goto :goto_0
+  
+      :cond_4
++     invoke-static {p0, p1}, Landroid/database/AbstractCursorInjector;->checkPosition(Landroid/database/AbstractCursor;I)Z
++ 
++     move-result v2
++ 
++     if-nez v2, :cond_miui_0
++ 
++     return v2
++ 
++     :cond_miui_0
+      iput p1, p0, Landroid/database/AbstractCursor;->mPos:I
+  
+      iget v2, p0, Landroid/database/AbstractCursor;->mRowIdColumnIndex:I

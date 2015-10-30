@@ -1,0 +1,15 @@
+*** ./smali/android/database/sqlite/SQLiteCursor.smali	2015-10-30 17:02:12.267288713 +0100
+--- /home/slimshadys/miui-v7/w7/temp/new_smali/framework.jar.out/./smali/android/database/sqlite/SQLiteCursor.smali	2015-10-30 16:57:42.039289480 +0100
+***************
+*** 594,599 ****
+--- 594,603 ----
+      :cond_0
+      invoke-direct {p0, p2}, Landroid/database/sqlite/SQLiteCursor;->fillWindow(I)V
+  
++     iget-object v0, p0, Landroid/database/sqlite/SQLiteCursor;->mWindow:Landroid/database/CursorWindow;
++ 
++     invoke-static {p0, v0, p1, p2}, Landroid/database/sqlite/SQLiteCursorInjector;->middle_onMove_calib_count(Landroid/database/sqlite/SQLiteCursor;Landroid/database/CursorWindow;II)V
++ 
+      :cond_1
+      const/4 v0, 0x1
+  

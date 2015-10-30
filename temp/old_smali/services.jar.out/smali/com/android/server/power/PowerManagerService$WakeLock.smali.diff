@@ -1,0 +1,19 @@
+*** ./smali/com/android/server/power/PowerManagerService$WakeLock.smali	2015-10-30 16:59:12.243289224 +0100
+--- /home/slimshadys/miui-v7/w7/temp/new_smali/services.jar.out/./smali/com/android/server/power/PowerManagerService$WakeLock.smali	2015-10-30 16:54:37.739290002 +0100
+***************
+*** 12,18 ****
+  .end annotation
+  
+  .annotation system Ldalvik/annotation/InnerClass;
+!     accessFlags = 0x12
+      name = "WakeLock"
+  .end annotation
+  
+--- 12,18 ----
+  .end annotation
+  
+  .annotation system Ldalvik/annotation/InnerClass;
+!     accessFlags = 0x10
+      name = "WakeLock"
+  .end annotation
+  

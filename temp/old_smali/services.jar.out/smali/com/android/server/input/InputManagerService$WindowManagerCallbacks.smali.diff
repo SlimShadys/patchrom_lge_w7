@@ -1,0 +1,14 @@
+*** ./smali/com/android/server/input/InputManagerService$WindowManagerCallbacks.smali	2015-10-30 16:59:15.659289214 +0100
+--- /home/slimshadys/miui-v7/w7/temp/new_smali/services.jar.out/./smali/com/android/server/input/InputManagerService$WindowManagerCallbacks.smali	2015-10-30 16:54:40.819289993 +0100
+***************
+*** 33,38 ****
+--- 33,41 ----
+  .method public abstract notifyANR(Lcom/android/server/input/InputApplicationHandle;Lcom/android/server/input/InputWindowHandle;Ljava/lang/String;)J
+  .end method
+  
++ .method public abstract notifyBackLidSwitchChanged(JZ)V
++ .end method
++ 
+  .method public abstract notifyConfigurationChanged()V
+  .end method
+  
