@@ -391,11 +391,13 @@
 
 .field private mPowerKeyTriggered:Z
 
-.field private final mPowerLongPress:Ljava/lang/Runnable;
+.field private mPowerLongPress:Ljava/lang/Runnable;
 
 .field mPowerManager:Landroid/os/PowerManager;
 
 .field mPreloadedRecentApps:Z
+
+.field private final mQuickBootLock:Ljava/lang/Object;
 
 .field mRecentAppsDialog:Lcom/android/internal/policy/impl/RecentApplicationsDialog;
 
@@ -11899,6 +11901,8 @@
     move-result v12
 
     if-eqz v12, :cond_19
+	
+	if-eqz p3, :cond_19 
 
     invoke-interface {v11}, Lcom/android/internal/telephony/ITelephony;->endCall()Z
     :try_end_5
@@ -12001,7 +12005,7 @@
     and-int/lit8 v12, v10, 0x1
 
     if-nez v12, :cond_0
-
+	
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBroadcastWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -12552,6 +12556,47 @@
     invoke-virtual/range {v2 .. v12}, Lcom/android/internal/policy/impl/PhoneWindowManager;->setAttachedWindowFrames(Landroid/view/WindowManagerPolicy$WindowState;IILandroid/view/WindowManagerPolicy$WindowState;ZLandroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
     :goto_3
+	 move-object/from16 v0, p2
+ 
+     iget v2, v0, Landroid/view/WindowManager$LayoutParams;->type:I
+ 
+     const/16 v3, 0x7e1
+ 
+     if-ne v2, v3, :cond_miui_0
+ 
+     move-object/from16 v0, p2
+ 
+     iget v2, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
+ 
+     and-int/lit16 v2, v2, 0x100
+ 
+     if-nez v2, :cond_miui_1
+ 
+     :cond_miui_0
+     move-object/from16 v0, p2
+ 
+     iget v2, v0, Landroid/view/WindowManager$LayoutParams;->type:I
+ 
+     const/4 v3, 0x3
+ 
+     if-ne v2, v3, :cond_miui_2
+ 
+     :cond_miui_1
+     const/4 v2, 0x0
+ 
+     iput v2, v13, Landroid/graphics/Rect;->top:I
+ 
+     iput v2, v12, Landroid/graphics/Rect;->top:I
+ 
+     iput v2, v11, Landroid/graphics/Rect;->top:I
+ 
+     iput v2, v10, Landroid/graphics/Rect;->top:I
+ 
+     iput v2, v9, Landroid/graphics/Rect;->top:I
+ 
+     iput v2, v8, Landroid/graphics/Rect;->top:I
+ 
+     :cond_miui_2
     and-int/lit16 v2, v4, 0x200
 
     if-eqz v2, :cond_3
@@ -16943,13 +16988,13 @@
     move-result v0
 
     .local v0, "keyguardShowing":Z
-    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mGlobalActions:Lcom/android/internal/policy/impl/GlobalActions;
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mGlobalActions:Lcom/android/internal/policy/impl/MiuiGlobalActions;
 
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->isDeviceProvisioned()Z
 
     move-result v2
 
-    invoke-virtual {v1, v0, v2}, Lcom/android/internal/policy/impl/GlobalActions;->showDialog(ZZ)V
+    invoke-virtual {v1, v0, v2}, Lcom/android/internal/policy/impl/MiuiGlobalActions;->showDialog(ZZ)V
 
     if-eqz v0, :cond_1
 
