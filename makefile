@@ -1,5 +1,5 @@
 #
-# Makefile for nexus5
+# Makefile for LG Optimus L90 (w7)
 #
 
 # The original zip file, MUST be specified by each product
