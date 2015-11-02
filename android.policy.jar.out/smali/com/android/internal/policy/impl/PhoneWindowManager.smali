@@ -477,7 +477,7 @@
 
 .field private mPowerKeyTriggered:Z
 
-.field private final mPowerLongPress:Ljava/lang/Runnable;
+.field private mPowerLongPress:Ljava/lang/Runnable;
 
 .field mPowerManager:Landroid/os/PowerManager;
 
@@ -16592,6 +16592,8 @@
     .line 4713
     .local v9, "hungUp":Z
     if-eqz v19, :cond_11
+	
+	if-eqz p3, :cond_19
 
     .line 4715
     :try_start_1
@@ -18347,6 +18349,46 @@
 
     .line 4033
     :goto_3
+    move-object/from16 v0, p2
+	iget v2, v0, Landroid/view/WindowManager$LayoutParams;->type:I 
+ 
+    const/16 v3, 0x7e1
+ 
+    if-ne v2, v3, :cond_miui_0
+
+    move-object/from16 v0, p2
+
+    iget v2, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    and-int/lit16 v2, v2, 0x100
+ 
+    if-nez v2, :cond_miui_1
+
+    :cond_miui_0
+    move-object/from16 v0, p2
+
+    iget v2, v0, Landroid/view/WindowManager$LayoutParams;->type:I
+
+    const/4 v3, 0x3
+
+    if-ne v2, v3, :cond_miui_2
+
+    :cond_miui_1
+    const/4 v2, 0x0
+
+    iput v2, v13, Landroid/graphics/Rect;->top:I
+
+    iput v2, v12, Landroid/graphics/Rect;->top:I
+
+    iput v2, v11, Landroid/graphics/Rect;->top:I
+
+    iput v2, v10, Landroid/graphics/Rect;->top:I
+
+    iput v2, v9, Landroid/graphics/Rect;->top:I
+
+    iput v2, v8, Landroid/graphics/Rect;->top:I
+ 
+    :cond_miui_2
     and-int/lit16 v3, v5, 0x200
 
     if-eqz v3, :cond_3
@@ -23448,13 +23490,13 @@
 
     .line 1090
     .local v0, "keyguardLocked":Z
-    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mGlobalActions:Lcom/android/internal/policy/impl/GlobalActions;
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mGlobalActions:Lcom/android/internal/policy/impl/MiuiGlobalActions;
 
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->isDeviceProvisioned()Z
 
     move-result v2
 
-    invoke-virtual {v1, v0, v2}, Lcom/android/internal/policy/impl/GlobalActions;->showDialog(ZZ)V
+    invoke-virtual {v1, v0, v2}, Lcom/android/internal/policy/impl/MiuiGlobalActions;->showDialog(ZZ)V
 
     .line 1091
     if-eqz v0, :cond_1
