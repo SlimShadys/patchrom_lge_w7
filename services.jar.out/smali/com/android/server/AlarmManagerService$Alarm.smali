@@ -21,13 +21,13 @@
 
 .field public operation:Landroid/app/PendingIntent;
 
-.field public pid:I
+.field public pid:I                            # add
 
 .field public repeatInterval:J
 
 .field public type:I
 
-.field public uid:I
+.field public uid:I                            # add					
 
 .field public when:J
 
@@ -40,7 +40,7 @@
 
 # direct methods
 .method public constructor <init>(IJJJJJLandroid/app/PendingIntent;Landroid/os/WorkSource;)V
-    .locals 1
+    .locals 1                             # change 0->1
     .param p1, "_type"    # I
     .param p2, "_when"    # J
     .param p4, "_whenElapsed"    # J
