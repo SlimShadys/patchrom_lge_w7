@@ -161,7 +161,7 @@
 .end method
 
 .method public static addCall(Lcom/android/internal/telephony/CallerInfo;Landroid/content/Context;Ljava/lang/String;IIJI)Landroid/net/Uri;
-    .locals 10
+    .locals 9
     .param p0, "ci"    # Lcom/android/internal/telephony/CallerInfo;
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "number"    # Ljava/lang/String;
