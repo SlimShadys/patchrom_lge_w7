@@ -1994,9 +1994,9 @@
 
     const v26, 0x8000
 
-    and-int v25, v25, v26
+    and-int v23, v23, v24
 
-    if-nez v25, :cond_3
+    #if-eqz v23, :cond_3
 
     move-object/from16 v0, p0
 
