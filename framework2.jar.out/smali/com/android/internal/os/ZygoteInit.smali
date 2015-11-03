@@ -817,6 +817,8 @@
     invoke-static {v10, v11}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 268
+	invoke-static {}, Lcom/android/internal/os/ZygoteInit;->preloadMiuiResources()V
+	
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v7
