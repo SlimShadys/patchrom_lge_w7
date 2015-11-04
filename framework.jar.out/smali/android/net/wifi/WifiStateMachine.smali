@@ -8540,7 +8540,7 @@
     const/16 v26, 0x0
 
     .line 1958
-    .local v26, 
+    .local v22, "sid":I
     const/16 v30, 0x0
 
     .local v30, "isWpsConfigured":Z
