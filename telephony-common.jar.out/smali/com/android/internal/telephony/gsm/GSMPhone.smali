@@ -3397,7 +3397,7 @@
 .end method
 
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 16
+    .locals 12
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
