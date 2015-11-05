@@ -7969,10 +7969,6 @@
 
     .line 1175
     :cond_17
-    monitor-exit v30
-    :try_end_c
-    .catchall {:try_start_c .. :try_end_c} :catchall_0
-
     goto/16 :goto_0
 
     .line 1177
@@ -9386,10 +9382,6 @@
     :catchall_0
     move-exception v29
 
-    monitor-exit v30
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_0
-
     throw v29
 
     .restart local v10    # "arr$":[Ljava/lang/String;
@@ -9508,12 +9500,6 @@
     goto/16 :goto_5
 
     .end local v35    # "wpsDeviceNameStr":Ljava/lang/String;
-    :cond_12
-    monitor-exit v30
-    :try_end_a
-    .catchall {:try_start_a .. :try_end_a} :catchall_0
-
-    goto/16 :goto_1
 
     .line 1970
     .end local v10    # "arr$":[Ljava/lang/String;
