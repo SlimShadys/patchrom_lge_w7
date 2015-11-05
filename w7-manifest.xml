@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="SlimShadys/patchrom_lge_w7" path="w7" remote="github" revision="master" />
+</manifest>
