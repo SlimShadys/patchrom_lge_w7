@@ -1,3 +1,7 @@
 out/*
 stockrom.zip
 stockrom/*
+temp/
+stockrom/
+out/
+.delete-zip-file-when-clean
