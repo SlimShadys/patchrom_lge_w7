@@ -25564,7 +25564,7 @@
     const/4 v2, 0x0
 
     iput v2, v1, Landroid/widget/Editor;->mCursorCount:I
- 
+
     return-void
 .end method
 
