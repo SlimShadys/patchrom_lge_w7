@@ -2985,6 +2985,7 @@
 
     .line 779
     .local v8, "r":Landroid/content/res/Resources;
+
     iget-object v1, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
  
     invoke-static {v0, v1}, Landroid/miui/ResourcesManager;->initMiuiResource(Landroid/content/res/Resources;Ljava/lang/String;)V
