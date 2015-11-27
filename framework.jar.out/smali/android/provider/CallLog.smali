@@ -1,4 +1,4 @@
-.class public Landroid/provider/CallLog$Calls;
+.class public Landroid/provider/CallLog;
 .super Ljava/lang/Object;
 .source "CallLog.java"
 
