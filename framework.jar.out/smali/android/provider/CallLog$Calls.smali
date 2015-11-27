@@ -236,11 +236,7 @@
 .end method
 
 .method public static addCall(Lcom/android/internal/telephony/CallerInfo;Landroid/content/Context;Ljava/lang/String;IIJIII)Landroid/net/Uri;
-<<<<<<< HEAD
-    .locals 16
-=======
     .locals 9
->>>>>>> 42936dd... patches reworked on 20151125 - able to compile framework.jar
     .param p0, "ci"    # Lcom/android/internal/telephony/CallerInfo;
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "number"    # Ljava/lang/String;
