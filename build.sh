@@ -8,7 +8,7 @@ if [ ! -f stockrom.zip ]
   then
   echo "${red}Stockrom.zip doesn't exist, downloading it now...${reset}"
   sleep 2
-  curl http://download1587.mediafire.com/dq1vfeu4dyog/93mzsp4db0kqsa4/stockrom.zip > stockrom.zip
+  curl http://tx1.androidfilehost.com/dl/Hi-twfXZYdzGJd4r03J72Q/1448905673/24269982087006601/stockrom.zip > stockrom.zip
   echo "${green}Finished, starting build now...${reset}"
   sleep 2
   clear
