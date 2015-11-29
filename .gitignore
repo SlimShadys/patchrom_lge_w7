@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 out/*
 stockrom.zip
 stockrom/*
@@ -5,3 +6,6 @@ temp/
 stockrom/
 out/
 .delete-zip-file-when-clean
+=======
+out/
+>>>>>>> a419e5341c9c03ef1145137ae6e7f4abf4adc586
