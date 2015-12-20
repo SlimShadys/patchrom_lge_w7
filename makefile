@@ -47,3 +47,6 @@ adjust_apps_location:
 
 	@echo Update boot.img
 	cp others/boot.img $(ZIP_DIR)/boot.img
+	
+	@echo Update build.prop
+	cp others/build.prop $(ZIP_DIR)/system/build.prop
